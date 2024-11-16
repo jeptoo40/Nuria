@@ -6,48 +6,85 @@
     <meta name="description" content="VEBRA TECH SOLUTIONS - IT Solutions, Software Development, Cybersecurity, IT Consulting">
     <title>VEBRA TECH SOLUTIONS</title>
     <style>
-        /* General styles */
+        /* Global Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
         }
 
-        /* Contact page styles */
-        .contact-page {
+        /* Navbar Styles */
+        nav {
+            background-color: #007BFF;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
             width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .logo img {
+            height: 50px;
+        }
+
+        nav .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+        }
+
+        nav .nav-links li {
+            margin-right: 20px;
+        }
+
+        nav .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        nav .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact Page Section */
+        .contact-page {
+            margin-top: 80px; /* To avoid overlap with fixed navbar */
+            padding: 30px;
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: #333;
             text-align: center;
+            margin-bottom: 20px;
         }
 
         .contact-description {
-            font-size: 1rem;
+            font-size: 1.1rem;
             color: #555;
             text-align: center;
+            margin-bottom: 30px;
         }
 
-        /* Contact info styles */
+        /* Contact Info */
         .contact-info {
-            margin-top: 30px;
             text-align: center;
         }
 
         .contact-info ul {
-            list-style-type: none;
+            list-style: none;
             padding: 0;
         }
 
         .contact-info li {
-            font-size: 1rem;
-            color: #333;
-            margin-bottom: 10px;
+            font-size: 1.1rem;
+            margin: 10px 0;
         }
 
         .contact-info a {
@@ -55,33 +92,32 @@
             text-decoration: none;
         }
 
-        /* Resizing the image with max-width and max-height */
         .contact-image {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .phone-call-img {
-            max-width: 100%;   /* Make the image width responsive */
-            height: auto;      /* Maintain aspect ratio */
-            max-height: 300px; /* Limiting the height to a max value */
-            border-radius: 8px; /* Optional: adds rounded corners */
-        }
-
-        /* Social media links */
-        .social-media {
             margin-top: 30px;
         }
 
+        .contact-image img {
+            max-width: 100%;
+            max-height: 300px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Social Media */
+        .social-media {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
         .social-media a {
-            display: inline-block;
-            margin: 10px;
-            font-size: 1rem;
-            color: #fff;
             background-color: #007BFF;
+            color: white;
             padding: 10px 20px;
+            border-radius: 8px;
             text-decoration: none;
-            border-radius: 5px;
+            font-size: 1.2rem;
             transition: background-color 0.3s ease;
         }
 
@@ -89,53 +125,60 @@
             background-color: #0056b3;
         }
 
-        /* Footer styles */
+        /* Footer Styles */
         footer {
-            margin-top: 50px;
-            background-color: #f8f9fa;
+            background-color: #333;
+            color: #fff;
             padding: 20px;
             text-align: center;
-        }
-
-        footer .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
+            margin-top: 50px;
         }
 
         footer .footer-logo img {
-            width: 120px;
-            height: auto;
+            height: 60px;
             margin-bottom: 20px;
         }
 
         footer .footer-info {
             font-size: 1rem;
-            color: #333;
         }
 
         footer .footer-info a {
-            color: #007BFF;
+            color: #fff;
             text-decoration: none;
+        }
+
+        footer .footer-social-media {
+            margin-top: 20px;
         }
 
         footer .footer-social-media a {
             margin: 10px;
-            font-size: 1.2rem;
-            color: #007BFF;
+            font-size: 1.5rem;
         }
 
-        /* Responsive design */
+        /* Responsive Styles */
         @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav .nav-links {
+                flex-direction: column;
+                margin-top: 10px;
+            }
+
+            .contact-page {
+                padding: 15px;
+            }
+
             h1 {
-                font-size: 1.5rem;
+                font-size: 2rem;
             }
 
-            .contact-info li {
-                font-size: 0.9rem;
-            }
-
-            .phone-call-img {
-                max-width: 100%;
+            .social-media {
+                flex-direction: column;
             }
         }
     </style>
@@ -143,84 +186,81 @@
 
 <body>
 
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <img src="https://github.com/jeptoo40/Nuria/raw/main/logo%20vebra.png" alt="Vebra Tech Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="VIRA about us.html">About Us</a></li>
+            <li><a href="VIBRA services.html">Services</a></li>
+            <li><a href="VIBRA portfolio.html">Portfolio</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Page Section -->
     <div class="contact-page">
-        <header>
-            <nav class="navbar">
-                <div class="logo">
-                    <img src="https://github.com/jeptoo40/Nuria/raw/main/logo%20vebra.png" alt="Logo Vebra">
-                </div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="VIRA about us.html">About Us</a></li>
-                    <li><a href="VIBRA services.html">Services</a></li>
-                    <li><a href="VIBRA portfolio.html">Portfolio</a></li>
-                </ul>
-            </nav>
-        </header>
+        <h1>Get in Touch</h1>
+        <p class="contact-description">We'd love to hear from you! Whether you have a question, need support, or just want to chat, feel free to reach out to us.</p>
 
-        <section class="contact-section">
-            <div class="container">
-                <h1>Get in Touch</h1>
-                <p class="contact-description">We'd love to hear from you! Whether you have a question, need support, or just want to chat, feel free to reach out to us.</p>
-    
-                <div class="contact-info">
-                    <ul>
-                        <li><strong>Email:</strong> <a href="mailto:inquiry@vebratech.com">inquiry@vebratech.com</a></li>
-                        <li><strong>Phone:</strong> <a href="tel:+25417445951">+25417445951</a></li>
-                    </ul>
-    
-                    <div class="contact-image">
-                        <!-- Image resized properly -->
-                        <img src="https://github.com/jeptoo40/Nuria/raw/main/phonecall.jpg" alt="Phone Call Image" class="phone-call-img">
-                    </div>
+        <div class="contact-info">
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:inquiry@vebratech.com">inquiry@vebratech.com</a></li>
+                <li><strong>Phone:</strong> <a href="tel:+25417445951">+25417445951</a></li>
+            </ul>
 
-                    <h3>Connect with Us</h3>
-                    <div class="social-media">
-                        <a href="https://wa.me/+254717445951" target="_blank" class="whatsapp">
-                            <i class="fab fa-whatsapp"></i> WhatsApp
-                        </a>
-                        
-                        <a href="https://www.instagram.com/italian.r.o.a.s.t/profilecard/?igsh=Z3J6MzZobjVob3pq" target="_blank" class="instagram">
-                            <i class="fab fa-instagram"></i> Instagram
-                        </a>
-                        
-                        <a href="https://www.facebook.com/profile.php?id=100085414080566" target="_blank" class="facebook">
-                            <i class="fab fa-facebook"></i> Facebook
-                        </a>
-
-                        <a href="https://www.tiktok.com/@vebratechcompany?_t=8rPbjzHo7Me&_r=1" target="_blank" class="tiktok">
-                            <i class="fab fa-tiktok"></i> TikTok
-                        </a>
-                    </div>
-                </div>
+            <div class="contact-image">
+                <!-- Image of phone call -->
+                <img src="https://github.com/jeptoo40/Nuria/raw/main/phonecall.jpg" alt="Phone Call Image">
             </div>
-        </section>
-    
-        <footer>
-            <div class="footer-container">
-                <div class="footer-logo">
-                    <img src="https://github.com/jeptoo40/Nuria/raw/main/logo%20vebra.png" alt="Logo Vebra">
-                </div>
 
-                <div class="footer-info">
-                    <p>&copy; 2024 VEBRA TECH SOLUTIONS. All rights reserved.</p>
-                    <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
-                </div>
-
-                <div class="footer-social-media">
-                    <a href="https://wa.me/+254717445951" target="_blank" class="whatsapp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a href="https://www.instagram.com/italian.r.o.a.s.t/profilecard/?igsh=Z3J6MzZobjVob3pq" target="_blank" class="instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.facebook.com/profile.php?id=100085414080566" target="_blank" class="facebook">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                </div>
+            <h3>Connect with Us</h3>
+            <div class="social-media">
+                <a href="https://wa.me/+254717445951" target="_blank" class="whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="https://www.instagram.com/italian.r.o.a.s.t/profilecard/?igsh=Z3J6MzZobjVob3pq" target="_blank" class="instagram">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100085414080566" target="_blank" class="facebook">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+                <a href="https://www.tiktok.com/@vebratechcompany?_t=8rPbjzHo7Me&_r=1" target="_blank" class="tiktok">
+                    <i class="fab fa-tiktok"></i> TikTok
+                </a>
             </div>
-        </footer>   
+        </div>
     </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="https://github.com/jeptoo40/Nuria/raw/main/logo%20vebra.png" alt="Logo Vebra">
+            </div>
+
+            <div class="footer-info">
+                <p>&copy; 2024 VEBRA TECH SOLUTIONS. All rights reserved.</p>
+                <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
+            </div>
+
+            <div class="footer-social-media">
+                <a href="https://wa.me/+254717445951" target="_blank" class="whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.instagram.com/italian.r.o.a.s.t/profilecard/?igsh=Z3J6MzZobjVob3pq" target="_blank" class="instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100085414080566" target="_blank" class="facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.tiktok.com/@vebratechcompany?_t=8rPbjzHo7Me&_r=1" target="_blank" class="tiktok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
