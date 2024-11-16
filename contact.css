@@ -55,9 +55,9 @@ h1 {
 
 .phone-call-img {
     width: 50%;
-    max-width: 200px;
+    max-width: 50px;
     height: auto;
-    border-radius: 8px; /* Optional: adds rounded corners */
+    border-radius: 4px; /* Optional: adds rounded corners */
 }
 
 /* Social media links */
