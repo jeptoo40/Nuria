@@ -87,8 +87,8 @@ body {
 
 .contact-image img {
     max-width: 100%;  /* Ensures the image doesn't overflow its container */
-    height: auto;     /* Maintains the aspect ratio */
-    width: 400px;     /* Adjust the width to a specific size */
+    
+    width: 100px;     /* Adjust the width to a specific size */
 }
 
 }
