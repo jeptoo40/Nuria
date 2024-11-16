@@ -116,17 +116,5 @@
             color: #007BFF;
         }
 
-        /* Responsive design */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 1.5rem;
-            }
 
-            .contact-info li {
-                font-size: 0.9rem;
-            }
-
-            .phone-call-img {
-                max-width: 100%;
-            }
-        }
+           
